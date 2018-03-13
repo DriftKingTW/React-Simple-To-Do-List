@@ -1,0 +1,57 @@
+html {
+  background-color: #333533; }
+
+ul {
+  margin: 30px auto 30px auto;
+  padding-left: 0;
+  width: 90%; }
+
+.App {
+  text-align: center; }
+
+.hint {
+  color: #6BB162;
+  text-align: left;
+  font-size: 12px; }
+
+.todo-wrapper {
+  min-width: 250px;
+  margin: 0px auto 0px auto;
+  padding: 20px;
+  max-width: 900px;
+  height: 180vh;
+  background-color: white; }
+  .todo-wrapper h1 {
+    color: #454745; }
+
+.control-bar {
+  margin: 10px auto 20px auto;
+  min-height: 60px;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas: ". cmp-only uncmp-only show-all clear-cmp ."; }
+  @media all and (max-width: 480px) {
+    .control-bar {
+      grid-template-areas: ". cmp-only uncmp-only ."  ". show-all clear-cmp ."; } }
+  .control-bar .ctrl-btn {
+    color: #03a9f4;
+    margin: 3px 2px 3px 2px;
+    cursor: pointer;
+    background-color: white; }
+    .control-bar .ctrl-btn:hover {
+      background-color: #FAFAFA;
+      opacity: 0.8; }
+
+.cmp-only {
+  grid-area: cmp-only; }
+
+.uncmp-only {
+  grid-area: uncmp-only; }
+
+.show-all {
+  grid-area: show-all; }
+
+.clear-cmp {
+  grid-area: clear-cmp; }
+
+/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,95 @@
+$color-success: #6BB162;
+$color-txt: #454745;
+$color-danger: #d9534f;
+$color-inactive: #e0e0e0;
+$box-shadow-0-3: 0px 1px 4px rgba(20%,20%,40%,0.3);
+
+input {
+  border: none;
+  &:focus {
+    box-shadow: $box-shadow-0-3;
+  }
+}
+
+.todo-item-true {
+
+  input {
+    text-decoration: line-through;
+    opacity: 0.3;
+  }
+
+}
+
+.grid-container {
+  border-radius: 0px 10px 10px 0px;
+  margin-top: 20px;
+  min-height: 60px;
+  display: grid;
+  grid-template-columns: auto 0.8fr auto;
+  grid-template-rows: auto;
+  grid-template-areas: "remove-btn todo-text isCompleted";
+
+}
+
+.isCompleted {
+  //border-radius: 0px 10px 10px 0px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  grid-area: isCompleted;
+}
+
+.true {
+  color: $color-success;
+}
+
+.false {
+  color: $color-inactive;
+}
+
+.remove-btn {
+  //border-radius: 0px 10px 10px 0px;
+  color: $color-inactive;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  grid-area: remove-btn;
+
+  &:hover {
+    color: $color-danger;
+    animation: hover-coloring 0.3s;
+
+    span {
+      transform:scale(1.2);
+      animation: hover-sizing 0.2s;
+    }
+
+  }
+
+}
+
+.todo-text {
+  word-wrap: break-word;
+  word-break: break-all;
+  padding: 20px 0 20px 0;
+  vertical-align: middle;
+  padding-left: 30px;
+  color: $color-txt;
+  grid-area: todo-text;
+}
+
+@keyframes hover-sizing
+{
+  from { transform:scale(1); }
+  to { transform:scale(1.2); }
+}
+
+@keyframes hover-coloring
+{
+  from { 
+    color: $color-danger;
+  }
+  to { 
+    color: $color-danger;
+  }
+}

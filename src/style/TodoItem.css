@@ -1,0 +1,64 @@
+input {
+  border: none; }
+  input:focus {
+    box-shadow: 0px 1px 4px rgba(51, 51, 102, 0.3); }
+
+.todo-item-true input {
+  text-decoration: line-through;
+  opacity: 0.3; }
+
+.grid-container {
+  border-radius: 0px 10px 10px 0px;
+  margin-top: 20px;
+  min-height: 60px;
+  display: grid;
+  grid-template-columns: auto 0.8fr auto;
+  grid-template-rows: auto;
+  grid-template-areas: "remove-btn todo-text isCompleted"; }
+
+.isCompleted {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  grid-area: isCompleted; }
+
+.true {
+  color: #6BB162; }
+
+.false {
+  color: #e0e0e0; }
+
+.remove-btn {
+  color: #e0e0e0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  grid-area: remove-btn; }
+  .remove-btn:hover {
+    color: #d9534f;
+    animation: hover-coloring 0.3s; }
+    .remove-btn:hover span {
+      transform: scale(1.2);
+      animation: hover-sizing 0.2s; }
+
+.todo-text {
+  word-wrap: break-word;
+  word-break: break-all;
+  padding: 20px 0 20px 0;
+  vertical-align: middle;
+  padding-left: 30px;
+  color: #454745;
+  grid-area: todo-text; }
+
+@keyframes hover-sizing {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.2); } }
+@keyframes hover-coloring {
+  from {
+    color: #d9534f; }
+  to {
+    color: #d9534f; } }
+
+/*# sourceMappingURL=TodoItem.css.map */

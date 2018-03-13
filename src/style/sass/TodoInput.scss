@@ -1,0 +1,85 @@
+$color-success: #6BB162;
+$txt-color: #454745;
+
+.todoWrapper {
+  text-align: left;
+  min-width: 250px;
+  box-shadow: 0px 1px 4px rgba(20%,20%,40%,0.3);
+}
+  
+.btn-add {
+  border-radius: 0px 10px 10px 0px;
+  border: none;
+  outline: none;
+  color: $color-success;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+    background-color: $color-success;
+    animation: hover-coloring-add 0.3s;
+  }
+
+}
+
+.grid-container-input {
+  border-radius: 0px 10px 10px 0px;
+  margin: 30px auto 30px auto;
+  margin-top: 30px;
+  min-height: 60px;
+  display: grid;
+  grid-template-columns: 0.9fr auto;
+  grid-template-rows: auto;
+  grid-template-areas: "input-text btn-add";
+  grid-row-gap: 15px;
+
+  @media all and (max-width: 480px) {
+    grid-template-columns: 0.85fr auto;
+  }
+
+}
+  
+.input-text {
+  color: $txt-color;
+  border: none;
+  padding-left: 30px;
+  grid-area: input-text;
+
+  &:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 5px rgba(20%,20%,40%,0.5);
+  }
+
+}
+  
+.btn-add {
+  height: 100%;
+  width: 100%;
+  grid-area: btn-add;
+
+  &:hover span{
+    transform:scale(1.2);
+    animation: hover-sizing 0.2s;
+  }
+
+}
+
+@keyframes hover-sizing
+{
+  from { transform:scale(1); }
+  to { transform:scale(1.2); }
+}
+
+@keyframes hover-coloring-add
+{
+  from { 
+    background-color: transparent;
+    color: $color-success;
+  }
+  to { 
+    background-color: $color-success;
+    color: white;
+  }
+}

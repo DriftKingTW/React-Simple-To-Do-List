@@ -1,0 +1,86 @@
+$color-bg: #333533;
+$color-txt: #454745;
+$color-component-bg: white;
+$color-component-hover-bg: #e0e0e0;
+$color-control-bar-hover-bg: #FAFAFA;
+$color-info: #03a9f4;
+$color-success: #6BB162;
+$hint-txt-size: 12px;
+
+html {
+  background-color: $color-bg;
+}
+
+ul {
+  margin: 30px auto 30px auto;
+  padding-left: 0;
+  width: 90%;
+}
+
+.App {
+  text-align: center;
+}
+
+.hint {
+  color: $color-success;
+  text-align: left;
+  font-size: $hint-txt-size;
+}
+
+.todo-wrapper {
+  min-width: 250px;
+  margin: 0px auto 0px auto;
+  padding: 20px;
+  max-width: 900px;
+  height: 180vh;
+  background-color: $color-component-bg;
+
+  h1 {
+    color: $color-txt;
+  }
+
+}
+
+.control-bar {
+  margin: 10px auto 20px auto;
+  min-height: 60px;
+  display: grid;
+  //grid-template-columns: 0.1fr 0.2fr 0.2fr 0.2fr 0.2fr 0.1fr;
+  grid-template-rows: auto;
+  grid-template-areas: ". cmp-only uncmp-only show-all clear-cmp .";
+
+  @media all and (max-width: 480px) {
+    grid-template-areas: ". cmp-only uncmp-only ." 
+                          ". show-all clear-cmp .";
+  }
+  
+  .ctrl-btn{
+    color: $color-info;
+    margin: 3px 2px 3px 2px;
+    cursor: pointer;
+    background-color: $color-component-bg;
+
+    &:hover {
+      background-color: $color-control-bar-hover-bg;
+      opacity: 0.8;
+    }
+
+  }
+
+}
+
+.cmp-only {
+  grid-area: cmp-only;
+}
+
+.uncmp-only {
+  grid-area: uncmp-only;
+}
+
+.show-all {
+  grid-area: show-all;
+}
+
+.clear-cmp {
+  grid-area: clear-cmp;
+}
