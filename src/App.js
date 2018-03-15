@@ -12,10 +12,10 @@ class App extends Component {
     // Init todo list
     this.state = {
       todos: [
-        {id: 0, text: "Eat some soil!", isCompleted: false, show: true},
-        {id: 1, text: "Make soil great again!", isCompleted: false, show: true},
-        {id: 2, text: "Steal some money!", isCompleted: false, show: true},
-        {id: 3, text: "longgggggggggggggggggggggggggggggggggggggg!", isCompleted: false, show: true},
+        {id: 0, text: "Learn React", isCompleted: false, show: true},
+        {id: 1, text: "Make Web Development great again!", isCompleted: false, show: true},
+        {id: 2, text: "Upload resume and this app to Dcard!", isCompleted: false, show: true},
+        {id: 3, text: "YES Let's commit it!", isCompleted: false, show: true},
       ],
       //nextId: 0
       nextId: 4
