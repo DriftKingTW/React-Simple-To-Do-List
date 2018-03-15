@@ -6,6 +6,8 @@ Install
 npm install
 ```
 
+# Usage
+
 Run
 ```shell
 npm start
